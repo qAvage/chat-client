@@ -2,9 +2,10 @@ import './style.css'
 import { io } from "socket.io-client";
 
 const name = prompt('Введите своё имя').trim()
-console.log(import.meta.env.VITE_YRT)
 
-const socket = io('ws://localhost:8000', {
+console.log(import.meta.env.VITE_SERVER_URL)
+
+const socket = io(import.meta.env.VITE_SERVER_URL, {
   withCredentials: true,
   extraHeaders: {
     "my-custom-header": "abcd"
