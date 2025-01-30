@@ -3,8 +3,6 @@ import { io } from "socket.io-client";
 
 const name = prompt('Введите своё имя').trim()
 
-console.log(import.meta.env.VITE_SERVER_URL)
-
 const socket = io(import.meta.env.VITE_SERVER_URL, {
   withCredentials: true,
   extraHeaders: {
